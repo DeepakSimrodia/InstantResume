@@ -1,0 +1,14 @@
+<%- include("./partials/header")%>
+
+<div class="background" style="padding-top: 10%; padding-bottom: 10%;">
+
+    <form action="/signin" method="post" class="form container d-flex flex-column align-items-center border h-75 w-75 p-5 justify-content-center">
+        <h1 class="mb-5">SIGNIN</h1>
+    <input type="text" placeholder="User Name" name="username" class="w-50 mb-4 p-2 rounded border">
+    <input type="password" placeholder="Password" name="password" class="w-50 mb-4 p-2 rounded border">
+    <a href="/forget-password" class="mb-1">Forget Password?</a>
+        <button class="btn btn-primary w-25">Signin</button>
+        <p>Doesn't have an account? <a href="/signup">Signup</a></p>
+    </form>
+</div>
+<%- include("./partials/footer")%>

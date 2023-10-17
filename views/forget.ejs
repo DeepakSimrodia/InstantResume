@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+
+
+
+<div class="background" style="padding-top: 9%; padding-bottom: 9%;">
+  <form action="/send-mail" method="post" class="form container d-flex flex-column align-items-center border h-75 w-75 p-5 mt-5 justify-content-center">
+      <h1 class="mb-5">FORGET-PASSWORD</h1>
+
+
+<input type="email" name="email" placeholder="Enter your email" class="w-50 mb-3 p-2 rounded border">
+
+<button class="btn btn-primary w-25" >Send mail</button>
+<a class="btn text-primary" href="/"><u>Home</u></a>
+</form>
+</div>
+
+<%- include('./partials/footer') %>
+

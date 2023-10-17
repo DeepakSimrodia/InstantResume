@@ -1,0 +1,106 @@
+<%- include("./partials/header")%>
+
+    <div class="profileBackground mt-5">
+        <div class="container d-flex pt-5 border-bottom border-danger pb-5">
+            <!-- <div>
+                <img
+                class="photo"
+                style="object-fit: cover"
+                class="rounded-circle profilePic"
+                src="/images/<%= user.avatar%>"
+                alt=""
+            />
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input class="d-none uploadImg" name="avatar" type="file" />
+                <button class="mt-3 btn btn-secondary" style="background-color: #f78542;">Upload Image</button>
+            </form>
+
+            </div> -->
+            <div class="d-flex align-items-center justify-content-between w-75">
+                <div>
+                    <h1>
+                        <%= user.name %>
+                    </h1>
+                    <h5>deepaksimdodia@gmail.com</h5>
+                </div>
+
+                <div class="">
+                    <a href="/signout" class="me-2 btn btn-outline-primary">Signout</a>
+                    <a href="reset-password" class="ms-2 btn btn-outline-primary">Reset-Password</a>
+                </div>
+            </div>
+        </div>
+        <p class="container mt-2">
+            Fill the details given below:
+        </p>
+
+        <form action="/profile/<%= user.id%>" method="post">
+            <div class="d-flex p-4">
+                <div class="basicDetails container w-50 ps-5">
+
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Basic Details : </h4>
+                    <input type="text" placeholder="Full Name" name="name" value="<%= user.name %>"
+                        class="w-75 mb-3 p-1 rounded border p-2">
+                    <input type="email" placeholder="Email" name="email" value="<%= user.email %>"
+                        class="w-75 mb-3 p-1 rounded border p-2">
+                    <input type="text" name="address" placeholder="Address" value="<%=user.address %>" class="w-75 mb-3 p-1 rounded border p-2">
+                    <input type="number" name="mobile" placeholder="Mobile No."
+                        class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.mobile %>">
+                    
+                        <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Personal Details : </h4>
+                    <p style="color: gray;">Date Of Birth :</p>
+                    <input type="date" name="DOB" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.DOB %>">
+                    <input type="text" name="language" placeholder="Languange" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.language %>">
+                    <input type="text" name="hobbie" placeholder="Hobbie" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.hobbie %>">
+                    
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Education : </h4>
+                    <input type="text" placeholder="Degree" name="degree" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.degree %>">
+                    <input type="text" placeholder="University/college" name="college" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.college %>">
+                    <input type="text" placeholder="Year of passing" name="year" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.year %>">
+ 
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Experience : </h4>
+                    <input type="text" placeholder="Job Title/Position" name="position" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.position %>">
+                    <input type="text" placeholder="Description" name="desciption" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.desciption %>">
+                    <input type="text" placeholder="Duration" name="duration" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.duration %>">
+
+                </div>
+                <div style="border-right: 1px solid #b80000;"></div>
+                <div class="links w-50 container ps-5">
+
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Links : </h4>
+                    <input type="text" name="Linkdin" placeholder="Linkdin" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.Linkdin %>">
+                    <input type="text" name="Github" placeholder="Github" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.Github %>">
+
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Objective : </h4>
+                    <textarea name="objective" placeholder="Objective" cols="30" rows="5"
+                        class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.objective %>"></textarea>
+
+                    <!-- <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75" >Declaration : </h4>
+                    <textarea name="declaration" placeholder="Declaration" cols="30" rows="5"
+                        class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.declaration %>"></textarea> -->
+
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Projects : </h4>
+                    <input type="text" placeholder="Project Title" name="title" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.title %>">
+                    <input type="text" placeholder="Technology" name="tecnology" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.tecnology %>">
+                    <input type="text" placeholder="projectDesc" name="projectDesc" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.projectDesc %>">
+
+                    <h4 style="color: gray;" class="border-bottom border-danger pb-2 mb-4 w-75">Skills : </h4>
+                    <input type="text" placeholder="Skills" name="skill" class="w-75 mb-3 p-1 rounded border p-2" value="<%= user.skill %>">
+
+                </div>
+            </div>
+            <button class="btn btn-outline-primary w-25 text-center detailsUploadButton">Upload Details</button>
+        </form>
+    </div>
+
+
+<script>
+  const profilePic = document.querySelector(".profilePic");
+  const uploadImg = document.querySelector(".uploadImg");
+  profilePic.addEventListener("click", () => {
+      console.log("hello");
+      uploadImg.click();
+  });
+</script>
+
+    <%- include("./partials/footer")%>

@@ -1,0 +1,15 @@
+<%- include("./partials/header")%>
+
+<div class="background" style="padding-top: 4%; padding-bottom: 4%;">
+    <form action="/signup" method="post" class="form container d-flex flex-column align-items-center border h-75 w-75 p-5 mt-5 justify-content-center">
+        <h1 class="mb-5">SIGNUP</h1>
+        <input type="text" placeholder="Full Name" name="name" class="w-50 mb-3 p-2 rounded border">
+        <input type="text" placeholder="Email" name="email" class="w-50 mb-3 p-2 rounded border">
+        <input type="text" placeholder="User Name" name="username" class="w-50 mb-3 p-2 rounded border">
+        <input type="password" placeholder="Password" name="password" class="w-50 mb-3 p-2 rounded border">
+        <button class="btn btn-primary w-25">Signup</button>
+        <p class="mt-2" style="color: gray;"> already have an account? <a href="/signin">Signin</a></p>
+    </form>
+</div>
+
+<%- include("./partials/footer")%>
