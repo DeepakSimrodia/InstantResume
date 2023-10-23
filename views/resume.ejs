@@ -21,19 +21,17 @@
     <div class="resume"
         style="width: 100%; display: flex; align-items: center; justify-content: center;  flex-direction: column; padding: 2%;">
 
-        <div class="" style="border: 1px solid black; width: 80%; background-color: rgb(255, 255, 150); padding: 4%; display: flex;">
+        <div class="" style="border: 1px solid black; width: 80%; background-color: rgba(128, 128, 128, 0.647); padding: 4%; display: flex;">
 
             <div style=" width: 70%; display: flex; align-items: center;">
-                <!-- <div style="border: 1px solid black; width: 200px; height: 200px; border-radius: 50%;">
-                    <img class="photo" style="object-fit: cover" class="rounded-circle profilePic" src="<%= user.avatar %>" alt="" />
-                </div> -->
+              
                 <h1 style="font-size: 43px; font-weight: 600; font-family: Montserrat; margin-left: 3%; text-transform: uppercase;">
                     <%= user.name %>
                 </h1>
                 
             </div>
 
-            <div style="text-align: right; margin-top: 2%; color: rgb(78, 78, 78); margin-left: 2%;">
+            <div style="text-align: right; margin-top: 2%; color: black; margin-left: 2%;">
                 <p style="font-family: Montserrat; margin-top: 2px;">
                     <i class="ri-home-4-line" style="font-size: 18px; float: left;"></i>
                     <%= user.address %>
@@ -50,36 +48,35 @@
 
         </div>
 
-        <div style="width: 80%; padding-top: 3%; border: 1px solid black; background-color: rgba(255, 255, 150, 0.578);">
-            <!-- <h1 style="font-family: Montserrat; font-weight: 500;">Objective :</h1> -->
+        <div style="width: 80%; padding-top: 3%; border: 1px solid black; background-color: gray;">
             <p style="padding: 3%; font-family: Montserrat;"><%= user.objective %></p>
 
             
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; background-color: rgb(255, 255, 90); padding-left: 4%; text-transform: uppercase;">Personal Details :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; background-color: rgb(204, 204, 204); padding-left: 4%; text-transform: uppercase;">Personal Details :</h1>
             <p class="" style="padding-left: 7%; padding-top: 1.5%; padding-bottom: 1%; font-family: Montserrat; font-weight: 500;"> DOB - <%= user.DOB %></p>
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; background-color: rgb(255, 255, 90); padding-left: 4%; text-transform: uppercase;">Skills :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; background-color: rgb(204, 204, 204); padding-left: 4%; text-transform: uppercase;">Skills :</h1>
 
             <p class="" style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;">- <%= user.skill %></p>
 
 
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; background-color: rgb(255, 255, 90); padding-left: 4%; text-transform: uppercase;">Education :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; background-color: rgb(204, 204, 204); padding-left: 4%; text-transform: uppercase;">Education :</h1>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 700;">-<%= user.degree %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 600;"><%= user.college %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.year %></p>
             
             
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; background-color: rgb(255, 255, 90); padding-left: 4%; text-transform: uppercase;">Experience :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; background-color: rgb(204, 204, 204); padding-left: 4%; text-transform: uppercase;">Experience :</h1>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.position %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.desciption %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.duration %></p>
             
             
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; padding-left: 4%; background-color: rgb(255, 255, 90); text-transform: uppercase;">Links :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; padding-left: 4%; background-color: rgb(204, 204, 204); text-transform: uppercase;">Links :</h1>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><i class="ri-linkedin-box-fill" style="font-size: 18px;"></i> -&nbsp;&nbsp;<%= user.Linkdin %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><i class="ri-github-fill" style="font-size: 18px;"></i> -&nbsp;&nbsp;<%= user.Github %></p>
 
 
-            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; padding-left: 4%; background-color: rgb(255, 255, 90); text-transform: uppercase;">Projects :</h1>
+            <h1 style="font-family: Montserrat; font-weight: 500; font-size: 25px; padding-top: 1%; padding-bottom: 1%; margin-top: 2%; padding-left: 4%; background-color: rgb(204, 204, 204); text-transform: uppercase;">Projects :</h1>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.title %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.tecnology %></p>
             <p style="padding-left: 7%; padding-top: 1.5%; padding-bottom: 1.5%; font-family: Montserrat; font-weight: 500;"><%= user.projectDesc %></p>
@@ -88,7 +85,7 @@
         </div>
     </div>
 
-    <a href="./resume.jpg" className="btn btn-outline" download>Download Resume
+    <a href="./resume.pdf" className="btn btn-outline" download>Download Resume
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
@@ -98,72 +95,3 @@
 </body>
 
 </html>
-
-
-
-
-<!-- <div class="d-flex flex-column align-items-center">
-
-    <div class="resume d-flex pt-5 border-bottom border-primary pb-5 p-3">
-        <div>
-            <img
-            class="photo"
-            style="object-fit: cover"
-            class="rounded-circle profilePic"
-            src=""
-            alt=""
-            />
-        </div>
-        <div class="d-flex p-2 justify-content-between w-75 ms-5 ">
-            <div>
-                <h1>
-                    <%= user.name %>
-                </h1>
-            </div>
-            <div>
-                <h6><%= user.email %></h6>
-                <h6><%= user.mobile %></h6>
-                <h5><%= user.address %></h5>
-            </div>
-        </div>
-
-        
-    </div>
-    <div class="mt-4 w-50 d-flex justify-content-between">
-        <h5>SKILLS :-</h5>
-        <div>
-            <p class="ps-3">+ <%= user.skill %></p>
-            <p class="ps-3">+ <%= user.skill %></p>
-            <p class="ps-3">+ <%= user.skill %></p>
-        </div>
-        
-    </div>
-
-    <div class="mt-4 w-50 d-flex justify-content-between">
-        <h5>EDUCATION :-</h5>
-        <div>
-            <p><%= user.degree %></p>
-            <p><%= user.college %></p>
-            <p><%= user.year %></p>
-        </div>
-        
-    </div>
-       
-    <div class="mt-4 w-50 d-flex justify-content-between">
-        <h5>LINKS :-</h5>
-        <div>
-            <p><%= user.Linkdin %></p>
-            <p><%= user.Github %></p>
-        </div>
-    </div>
-
-    <div class="mt-4 w-50 d-flex justify-content-between">
-        <h5>PERSONAL DETAILS :-</h5>
-        <div>
-            <p><%= user.DOB %></p>
-            <p><%= user.language %></p>
-            <p><%= user.hobbie %></p>
-        </div>
-        
-    </div>
-    </div> -->

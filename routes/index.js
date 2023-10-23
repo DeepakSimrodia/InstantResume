@@ -5,8 +5,7 @@ const passport = require('passport')
 const LocalStreategy = require('passport-local');
 passport.use(new LocalStreategy(User.authenticate()))
 const nodemailer=require("nodemailer")
-const upload = require("../helpers/multer").single("avatar");
-const fs = require("fs");
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -54,9 +53,7 @@ router.get('/profile',isLoggedIn,function(req, res, next) {
 
 
 router.post("/profile/:id", isLoggedIn, async function (req, res, next) {
-  // const { name,email,address,mobile,DOB,language,hobbie,degree,college,year,position,description,duration,Linkdin,Github,objective,declaration,title,technolgy,projectDesc,skill } = req.body;
-  // const user = { name,email,address,mobile,DOB,language,hobbie,degree,college,year,position,description,duration,Linkdin,Github,objective,declaration,title,technolgy,projectDesc,skill};
-  // await User.findOneAndUpdate(req.params.id, user);
+
   const user=req.body
   await User.findByIdAndUpdate(req.params.id,user)
   res.redirect("/resume/:"+user.id)
@@ -64,46 +61,13 @@ router.post("/profile/:id", isLoggedIn, async function (req, res, next) {
 });
 
 
-router.post("/upload", isLoggedIn, async function (req, res, next) {
-  upload(req, res, function (err) {
-    if (err) {
-      console.log("ERROR>>>>>", err.message);
-      res.send(err.message);
-    }
-    if (req.file) {
-      if (req.user.avatar != "dummy.png") {
-        fs.unlinkSync("./public/images/" + req.user.avatar);
-      }
-      req.user.avatar = req.file.filename;
-      req.user
-        .save()
-        .then(() => {
-          res.redirect("/profile");
-        })
-        .catch((err) => {
-          res.send(err);
-        });
-    }
-  });
-});
 
 router.get('/resume/:id',isLoggedIn,function(req,res){
   res.render('resume',{ isLoggedIn:req.user?true:false,user:req.user })
 })
 
 
-// /* GET forget page. */
-// router.get("/forget-password", function (req, res, next) {
-//   try {
-//     res.render("forget", {
-//       title: "Instant Resume | Forgetpassword",
-//       isloggedIn: req.user ? true : false,
-//       user: req.user,
-//     });
-//   } catch (error) {
-//     console.log(err);
-//   }
-// });
+
 
 
 /* GET Forget password page. */
